@@ -1,8 +1,12 @@
 import React from 'react'
+import NavMenu from '../../components/molecules/NavMenu'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <NavMenu />
+      <div>Contact</div>
+    </div>
   )
 }
 

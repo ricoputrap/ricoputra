@@ -1,8 +1,12 @@
 import React from 'react'
+import NavMenu from '../../components/molecules/NavMenu'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div>
+      <NavMenu />
+      <div>Projects</div>
+    </div>
   )
 }
 
