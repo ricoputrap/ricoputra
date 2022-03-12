@@ -7,5 +7,5 @@ export const Wrapper = styled.div`
   width: 260px;
   min-height: 100vh;
 
-  border-right: 1px solid ${props => props.theme.border};
+  border-right: 1px solid ${props => props.theme.colorBorder};
 `;

@@ -14,8 +14,8 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.div`
-  color: ${props => props.theme.active};
-  background-color: ${props => props.theme.border};
+  color: ${props => props.theme.colorActive};
+  background-color: ${props => props.theme.colorBorder};
   width: fit-content;
   padding: 0 4px;
 `;

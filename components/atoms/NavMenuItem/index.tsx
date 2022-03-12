@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Wrapper } from './index.styles';
+import { Label, Wrapper } from './index.styles';
 
 interface Props {
   img: any;
@@ -15,7 +15,7 @@ const NavMenuItem: React.FC<Props> = ({ img, to, isActive = false, label }) => {
     <Link href={to}>
       <Wrapper isActive={isActive}>
         <Image src={img} width={20} height={20} className="nav-icon" />
-        <p>{label}</p>
+        <Label>{label}</Label>
       </Wrapper>
     </Link>
   )
