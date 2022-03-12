@@ -25,9 +25,12 @@ export const Wrapper = styled.div<WrapperProps>`
     color: ${({ isActive, theme }) => isActive ? theme.colorActive : theme.colorPrimary};
   }
 
-  span {
+  svg.nav-icon {
     width: 20px !important;
     height: 20px !important;
+    path {
+      fill: ${({ isActive, theme }) => isActive ? theme.colorActive : theme.colorPrimary};
+    }
   }
 `;
 

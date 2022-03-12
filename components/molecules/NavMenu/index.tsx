@@ -13,14 +13,14 @@ const NavMenu: React.FC = () => {
 
   interface Item {
     to: string;
-    img: any;
+    Icon: any;
     label: string;
     isActive: boolean;
   }
 
-  const createMenuItemData = (to: string, img: any, label: string): Item => {
+  const createMenuItemData = (to: string, Icon: any, label: string): Item => {
     const isActive = activePath === to;
-    return { to, img, label, isActive }
+    return { to, Icon, label, isActive }
   };
 
   const menus = useMemo(() => ([
@@ -36,7 +36,7 @@ const NavMenu: React.FC = () => {
         <NavMenuItem 
           key={item.to}
           to={item.to} 
-          img={item.img} 
+          Icon={item.Icon} 
           label={item.label}
           isActive={activePath === item.to}
         />

@@ -23,10 +23,7 @@ const Hero: React.FC = () => {
           <span className="color-active"> REACT </span>
         </Heading2>
 
-        <div>
         <TechStacks />
-
-      </div>
       </div>
       <ImageWrapper>
         <Image src={HeroImage} width={304} height={403} />
