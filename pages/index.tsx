@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NavMenu from '../components/molecules/NavMenu'
+import { Heading1 } from '../components/atoms/Text/index.styles'
+import Hero from '../components/organisms/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <NavMenu />
-        Home
+        <Hero />
         
       </main>
 

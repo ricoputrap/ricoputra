@@ -18,3 +18,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.color-primary {
+  color: #020302;
+}
+.color-secondary {
+  color: #939393;
+}
+.color-active {
+  color: #7558F5;
+}
+
+.color-bg {
+  color: #FFFFFF;
+}
+.color-bg-card {
+  color: #F6F8FA;
+}
+.color-border {
+  color: #C9E5E8;
+}

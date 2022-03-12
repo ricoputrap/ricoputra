@@ -7,15 +7,15 @@ interface Props {
   img: any;
   to: string;
   isActive?: boolean;
-  children: React.ReactNode;
+  label: string;
 }
 
-const NavMenuItem: React.FC<Props> = ({ img, to, isActive = false, children }) => {
+const NavMenuItem: React.FC<Props> = ({ img, to, isActive = false, label }) => {
   return (
     <Link href={to}>
       <Wrapper isActive={isActive}>
-        <Image src={img} width={20} height={20} />
-        <p>{children}</p>
+        <Image src={img} width={20} height={20} className="nav-icon" />
+        <p>{label}</p>
       </Wrapper>
     </Link>
   )

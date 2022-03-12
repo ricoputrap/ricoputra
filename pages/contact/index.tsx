@@ -1,11 +1,10 @@
 import React from 'react'
-import NavMenu from '../../components/molecules/NavMenu'
+import { Heading2 } from '../../components/atoms/Text/index.styles'
 
 const Contact = () => {
   return (
     <div>
-      <NavMenu />
-      <div>Contact</div>
+      <Heading2>Contact</Heading2>
     </div>
   )
 }

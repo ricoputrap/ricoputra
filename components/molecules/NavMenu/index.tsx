@@ -5,6 +5,7 @@ import book from "../../../public/icons/book.svg"
 import message from "../../../public/icons/message.svg"
 import NavMenuItem from '../../atoms/NavMenuItem'
 import { useRouter } from 'next/router'
+import { Wrapper } from './index.styles'
 
 const NavMenu: React.FC = () => {
   const router = useRouter();
@@ -19,12 +20,7 @@ const NavMenu: React.FC = () => {
 
   const createMenuItemData = (to: string, img: any, label: string): Item => {
     const isActive = activePath === to;
-    return {
-      to,
-      img,
-      label,
-      isActive
-    }
+    return { to, img, label, isActive }
   };
 
   const menus = useMemo(() => ([
@@ -32,21 +28,20 @@ const NavMenu: React.FC = () => {
     createMenuItemData("/projects", code, "Projects"),
     createMenuItemData("/blog", book, "Blog"),
     createMenuItemData("/contact", message, "Contact"),
-  ]), []);
+  ]), [activePath]);
 
   return (
-    <div>
+    <Wrapper>
       {menus.map(item => (
         <NavMenuItem 
           key={item.to}
           to={item.to} 
           img={item.img} 
-          isActive={item.isActive}
-        >
-          {item.label}
-        </NavMenuItem>
+          label={item.label}
+          isActive={activePath === item.to}
+        />
       ))}
-    </div>
+    </Wrapper>
   )
 }
 
