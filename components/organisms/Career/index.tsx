@@ -7,24 +7,28 @@ import { Container, JobCard, JobsContainer } from './index.styles'
 const Career: NextPage = () => {
   const data = [
     { 
+      id: 0,
       title: "Senior Web Developer",
       company: "M+ Software",
       start: "Jan 2022",
       end: ""
     },
     { 
+      id: 1,
       title: "Junior Web Developer",
       company: "M+ Software",
       start: "Dec 2020",
       end: "Jan 2022"
     },
     { 
+      id: 2,
       title: "Freelance Frontend Web Developer",
       company: "Universitas Indonesia",
       start: "Sep 2020",
       end: "Jan 2021"
     },
     { 
+      id: 3,
       title: "Freelance Project Manager",
       company: "Universitas Indonesia",
       start: "Nov 2019",
@@ -38,7 +42,7 @@ const Career: NextPage = () => {
 
         <JobsContainer>
           {data && data.map(item => (
-            <JobCard>
+            <JobCard key={item.id}>
               <Heading3>{item.title}</Heading3>
               <Text size={18} weight="medium" color="active">
                 M+ Software
