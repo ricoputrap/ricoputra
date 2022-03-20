@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading2 } from '../../components/atoms/Text/index.styles'
+import { Heading2 } from '../../core-ui/atoms/Text/index.styles'
 
 const Projects = () => {
   return (

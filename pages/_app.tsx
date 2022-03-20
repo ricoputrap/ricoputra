@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         display: "flex"
       }}>
         <Navbar />
-        <div style={{ paddingLeft: 54, paddingTop: 80, paddingRight: 80 }}>
+        <div>
           <Component {...pageProps} />
         </div>
       </div>

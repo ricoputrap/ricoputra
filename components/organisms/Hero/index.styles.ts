@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading1, Heading2 } from "../../atoms/Text/index.styles";
+import { Heading1, Heading2 } from "../../../core-ui/atoms/Text/index.styles";
 
 export const Container = styled.div`
   display: flex;
@@ -21,6 +21,7 @@ export const Name = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  height: fit-content;
   span {
     width: 304px !important;
     height: 404px !important;
