@@ -3,6 +3,7 @@ import { Heading1, Heading2 } from "../../../core-ui/atoms/Text/index.styles";
 
 export const Container = styled.div`
   display: flex;
+  padding-top: 40px;
 
   ${Heading1} {
     margin-bottom: 40px;

@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Career from '../components/organisms/Career'
 import Hero from '../components/organisms/Hero'
 import { HorizontalDivider } from '../core-ui/atoms/Divider/index.styles'
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <HorizontalDivider />
+        <Career />
       </main>
 
       <footer>

@@ -14,14 +14,22 @@ export const Heading2 = styled.h2`
   margin: 0;
 `;
 
+export const Heading3 = styled.h3`
+  font-size: 24px;
+  font-weight: 700;
+  color: ${props => props.theme.colorPrimary};
+  margin: 0;
+`;
+
 interface TextProps {
   weight?: "regular" | "medium" | "bold";
   color?: "primary" | "secondary" | "active" | "white";
+  size?: number;
 }
 
 export const Text = styled.p<TextProps>`
   margin: 0;
-  font-size: 20px;
+  font-size: ${props => props.size ? `${props.size}px` : "20px"};
   font-family: "Fira Mono", monospace;
   color: ${({ color, theme }) => 
     color === "primary" ? theme.colorPrimary : 
