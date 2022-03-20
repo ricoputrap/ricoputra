@@ -11,7 +11,7 @@ interface Props {
 
 const NavMenuItem: React.FC<Props> = ({ Icon, to, isActive = false, label }) => {
   return (
-    <Link href={to}>
+    <Link href={to} passHref>
       <Wrapper isActive={isActive}>
         <Icon className="nav-icon" />
         <Label>{label}</Label>

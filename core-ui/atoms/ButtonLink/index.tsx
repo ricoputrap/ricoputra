@@ -17,7 +17,7 @@ const ButtonLink: React.FC<Props> = ({
   textTransform = "initial",
 }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Button
         variant={variant}
         textTransform={textTransform}
