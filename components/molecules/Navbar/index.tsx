@@ -7,7 +7,7 @@ import NavMenu from '../NavMenu'
 const Navbar: React.FC = () => {
   return (
     <Wrapper>
-      <Image src={Avatar} height={129} width={129} />
+      <Image src={Avatar} height={129} width={129} alt="avatar" />
       <NavMenu />
     </Wrapper>
   )
