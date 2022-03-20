@@ -28,7 +28,7 @@ const NavMenu: React.FC = () => {
     createMenuItemData("/projects", code, "Projects"),
     createMenuItemData("/blog", book, "Blog"),
     createMenuItemData("/contact", message, "Contact"),
-  ]), [activePath]);
+  ]), [activePath, createMenuItemData]);
 
   return (
     <Wrapper>

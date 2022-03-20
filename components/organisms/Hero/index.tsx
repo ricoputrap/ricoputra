@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           </Heading1>
 
           <Heading2>
-            AND I'M A
+            AND I&apos;M A
             <span className="color-active"> FRONTEND DEVELOPER </span>
             SPECIALIZED IN 
             <span className="color-active"> REACT </span>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
 
         {/* IMAGE */}
         <ImageWrapper>
-          <Image src={HeroImage} width={304} height={403} />
+          <Image src={HeroImage} width={304} height={403} alt="hero" />
         </ImageWrapper>
         
       </Container>
