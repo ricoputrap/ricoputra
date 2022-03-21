@@ -30,7 +30,7 @@ const Home: NextPage<Props> = ({ jobsData }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const req = await fetch("http://localhost:3000/api/jobs");
+  const req = await fetch("https://api-ricoputra.vercel.app/jobs");
   const jobsData = await req.json();
 
   return {
