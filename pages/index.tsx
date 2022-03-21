@@ -1,10 +1,14 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Career from '../components/organisms/Career'
 import Hero from '../components/organisms/Hero'
 import { HorizontalDivider } from '../core-ui/atoms/Divider/index.styles'
 
-const Home: NextPage = () => {
+interface Props {
+  jobsData: any[]
+}
+
+const Home: NextPage<Props> = ({ jobsData }) => {
   return (
     <div>
       <Head>
@@ -16,13 +20,22 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <HorizontalDivider />
-        <Career />
+        <Career jobsData={jobsData} />
       </main>
 
       <footer>
       </footer>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const req = await fetch("http://localhost:3000/api/jobs");
+  const jobsData = await req.json();
+
+  return {
+    props: { jobsData }
+  }
 }
 
 export default Home
