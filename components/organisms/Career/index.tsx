@@ -18,7 +18,7 @@ const Career = ({ jobsData }: Props) => {
             <JobCard key={item.id}>
               <Heading3>{item.title}</Heading3>
               <Text size={18} weight="medium" color="active">
-                M+ Software
+                {item.company}
               </Text>
               <Text size={18} weight="medium" color="secondary">
                 {item.start} - {item.end || "Present"}
