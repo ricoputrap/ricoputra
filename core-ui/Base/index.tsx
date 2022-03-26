@@ -18,6 +18,7 @@ const Base: React.FC<Props> = ({
           name="description"
           content="A frontend web developer specialized in React JS but also using TypeScript, Next JS, styled-components, figma, and docker in the development processes"
         />
+        <link rel="icon" href="/avatar.png" />
       </Head>
 
       <main>{children}</main>

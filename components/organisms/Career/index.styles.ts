@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import { Heading2, Heading3 } from "../../../core-ui/atoms/Text/index.styles";
-
-export const Container = styled.div`
-  ${Heading2} {
-    margin-bottom: 40px;
-  }
-`;
+import { Heading3 } from "../../../core-ui/atoms/Text/index.styles";
 
 export const JobsContainer = styled.div`
   display: flex;

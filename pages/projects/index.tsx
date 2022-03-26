@@ -1,11 +1,14 @@
 import React from 'react'
-import { Heading2 } from '../../core-ui/atoms/Text/index.styles'
+import Section from '../../core-ui/atoms/Section'
+import Base from '../../core-ui/Base'
 
 const Projects = () => {
   return (
-    <div>
-      <Heading2>Projects</Heading2>
-    </div>
+    <Base title='Projects by ricoputra'>
+      <Section title='Projects'>
+
+      </Section>
+    </Base>
   )
 }
 

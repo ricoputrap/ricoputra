@@ -5,8 +5,7 @@ import HeroImage from "../../../public/images/HeroImage.png"
 import Image from 'next/image'
 import TechStacks from './TechStacks'
 import CTAs from './CTAs'
-import { Section } from '../../../core-ui/atoms/Section/index.styles'
-
+import Section from '../../../core-ui/atoms/Section'
 
 const Hero: React.FC = () => {
   return (

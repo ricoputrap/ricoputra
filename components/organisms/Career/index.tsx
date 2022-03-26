@@ -1,7 +1,7 @@
 import React from 'react'
-import { Section } from '../../../core-ui/atoms/Section/index.styles'
-import { Heading2, Heading3, Text } from '../../../core-ui/atoms/Text/index.styles'
-import { Container, JobCard, JobsContainer } from './index.styles'
+import Section from '../../../core-ui/atoms/Section'
+import { Heading3, Text } from '../../../core-ui/atoms/Text/index.styles'
+import { JobCard, JobsContainer } from './index.styles'
 
 interface Props {
   jobsData: any[];
@@ -9,10 +9,7 @@ interface Props {
 
 const Career = ({ jobsData }: Props) => {
   return (
-    <Section>
-      <Container>
-        <Heading2>Career</Heading2>
-
+    <Section title='Career'>
         <JobsContainer>
           {jobsData && jobsData.map(item => (
             <JobCard key={item.id}>
@@ -26,7 +23,6 @@ const Career = ({ jobsData }: Props) => {
             </JobCard>
           ))}
         </JobsContainer>
-      </Container>
     </Section>
   )
 }
