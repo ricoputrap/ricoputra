@@ -10,7 +10,7 @@ type Job = {
 }
 
 type Jobs = {
-  data: Job[]
+  data: Job[] 
 }
 
 export default (req: NextApiRequest, res: NextApiResponse<Jobs>) => {
