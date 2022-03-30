@@ -20,12 +20,11 @@ const Home: NextPage<Props> = ({ jobs }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const HOST: string | undefined = process.env.HOST;
-  // const URL: string = HOST + "/api/jobs";
+  const URL: string = HOST + "/api/jobs";
 
-  // const req = await fetch(URL);
-  // const jobsData = await req.json();
-  // const jobs = jobsData.data;
-  const jobs: any[] = []
+  const req = await fetch(URL);
+  const jobsData = await req.json();
+  const jobs = jobsData.data;
 
   return {
     props: { jobs }
