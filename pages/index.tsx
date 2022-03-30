@@ -5,25 +5,29 @@ import { HorizontalDivider } from '../core-ui/atoms/Divider/index.styles'
 import Base from '../core-ui/Base'
 
 interface Props {
-  jobsData: any[]
+  jobs: any[]
 }
 
-const Home: NextPage<Props> = ({ jobsData }) => {
+const Home: NextPage<Props> = ({ jobs }) => {
   return (
     <Base>
       <Hero />
       <HorizontalDivider />
-      <Career jobsData={jobsData} />
+      <Career jobsData={jobs} />
     </Base>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const req = await fetch("https://api-ricoputra.vercel.app/jobs");
+  const HOST: string | undefined = process.env.HOST;
+  const URL: string = HOST + "/api/jobs";
+
+  const req = await fetch(URL);
   const jobsData = await req.json();
+  const jobs = jobsData.data;
 
   return {
-    props: { jobsData }
+    props: { jobs }
   }
 }
 
