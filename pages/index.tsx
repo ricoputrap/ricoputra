@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticProps } from 'next'
 import Career from '../components/organisms/Career'
 import Hero from '../components/organisms/Hero'
+import { HOST } from '../config'
 import { HorizontalDivider } from '../core-ui/atoms/Divider/index.styles'
 import Base from '../core-ui/Base'
 
@@ -19,7 +20,6 @@ const Home: NextPage<Props> = ({ jobs }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const HOST: string | undefined = process.env.HOST;
   const URL: string = HOST + "/api/jobs";
 
   const req = await fetch(URL);
