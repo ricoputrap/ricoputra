@@ -4,21 +4,24 @@ import ProjectItem from '../../components/molecules/ProjectItem'
 import { HOST } from '../../config'
 import Section from '../../core-ui/atoms/Section'
 import Base from '../../core-ui/Base'
+import { FlexContainer } from '../../core-ui/Base/index.styles'
 import { Projects } from '../../types/project'
 
 const Projects: NextPage<Projects> = ({ data }) => {
   return (
     <Base title='Projects by ricoputra'>
       <Section title='Projects'>
-        {data.map(({ id, title, cover, techStacks }) => 
-          <ProjectItem
-            key={id}
-            id={id}
-            title={title}
-            cover={cover}
-            techStacks={techStacks}
-          />
-        )}
+        <FlexContainer>
+          {data.map(({ id, title, cover, techStacks }) => 
+            <ProjectItem
+              key={id}
+              id={id}
+              title={title}
+              cover={cover}
+              techStacks={techStacks}
+            />
+          )}
+        </FlexContainer>
       </Section>
     </Base>
   )

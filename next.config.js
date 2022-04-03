@@ -14,7 +14,12 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["images.unsplash.com"]
+    domains: [
+      "images.unsplash.com", 
+      "upload.wikimedia.org", 
+      "cdn4.iconfinder.com",
+      "styled-components.com"
+    ]
   }
 }
 
