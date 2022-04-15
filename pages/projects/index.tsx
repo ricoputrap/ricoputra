@@ -12,12 +12,13 @@ const Projects: NextPage<Projects> = ({ data }) => {
     <Base title='Projects by ricoputra'>
       <Section title='Projects'>
         <FlexContainer>
-          {data.map(({ id, title, cover, techStacks }) => 
+          {data.map(({ id, title, cover, link, techStacks }) => 
             <ProjectItem
               key={id}
               id={id}
               title={title}
               cover={cover}
+              link={link}
               techStacks={techStacks}
             />
           )}

@@ -18,7 +18,8 @@ const nextConfig = {
       "images.unsplash.com", 
       "upload.wikimedia.org", 
       "cdn4.iconfinder.com",
-      "styled-components.com"
+      "styled-components.com",
+      "lamclpjqcncarthsijwv.supabase.co"
     ]
   }
 }

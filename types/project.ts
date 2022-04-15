@@ -8,6 +8,7 @@ export type Project = {
   id: number;
   title: string;
   cover: string;
+  link: string;
   techStacks: TechStack[]
 }
 
