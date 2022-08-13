@@ -4,6 +4,7 @@ import React from 'react'
 
 import SelfPic from "../../../assets/images/self-pic.png";
 import CTAs from '../../molecules/CTAs';
+import HeroDescription from '../../molecules/HeroDescription';
 
 const Hero: React.FC = () => {
   return (
@@ -23,10 +24,12 @@ const Hero: React.FC = () => {
         gap={4} 
         maxHeight={{ md: "305px" }} 
       >
+        {/* Title */}
         <Heading as="h1" fontSize={{ base: 36, lg: 40 }}>
           Hi, I&apos;m Rico
         </Heading>
 
+        {/* Subtitle */}
         <Heading 
           as="h2" 
           fontSize={{ base: "20px", lg: "24px" }}
@@ -35,17 +38,7 @@ const Hero: React.FC = () => {
           Software Engineer - React JS
         </Heading>
 
-        <Box textAlign={{ base: "center", md: "unset" }}>
-          <Text maxWidth={96} fontWeight="bold">Rico Putra Pradana 🙋🏻‍♂️</Text>
-          <Text maxWidth={96}>Professionally coding for <strong>2 years</strong> 🧑🏻‍💻</Text>
-          <Text maxWidth={96}>
-            A <strong>React Developer</strong> who can 
-            coding <strong>backend</strong> on <strong>Express JS</strong> and love 
-            doing <strong>system analysis</strong>.
-          </Text>
-        </Box>
-       
-       {/* CTAs */}
+        <HeroDescription />
         <CTAs />
       </Box>
 
