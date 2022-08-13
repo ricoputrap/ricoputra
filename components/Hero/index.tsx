@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <Box display="flex" justifyContent="space-between">
       <Box display="flex" flexDirection="column" gap={4} maxHeight={305} justifyContent="center">
-        <Heading as="h1" fontSize={40}>Hi, I'm Rico</Heading>
+        <Heading as="h1" fontSize={40}>Hi, I&apos;m Rico</Heading>
         <Heading as="h2" fontSize={24} color="grayText">Software Engineer - React JS</Heading>
         <Box>
           <Text maxWidth={96} fontWeight="bold">Rico Putra Pradana 🙋🏻‍♂️</Text>
