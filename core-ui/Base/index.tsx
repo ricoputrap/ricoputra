@@ -16,7 +16,10 @@ const Base: React.FC<Props> = ({
         <title>{title}</title>
         <meta
           name="description"
-          content="A frontend web developer specialized in React JS but also using TypeScript, Next JS, styled-components, figma, and docker in the development processes"
+          content="
+            A React Developer who can coding backend on Express JS and love doing system analysis.
+            Tech stacks: React JS, Next JS, JavaScript, TypeScript, Node JS, Express JS, Docker, Notion, Jira, Confluence, Figma, Invision
+          "
         />
         <link rel="icon" href="/avatar.png" />
       </Head>

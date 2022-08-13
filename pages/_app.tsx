@@ -1,21 +1,23 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
-import BaseTheme from "../styles/index.styles";
-import Navbar from '../components/molecules/Navbar';
+
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Fira Code', monospace`,
+    body: `'Fira Code', monospace`
+  },
+  colors: {
+    grayText: "#787774"
+  }
+})
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={BaseTheme}>
-      <div style={{
-        display: "flex"
-      }}>
-        <Navbar />
-        <div>
-          <Component {...pageProps} />
-        </div>
-      </div>
-    </ThemeProvider>
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
   )
 }
 
