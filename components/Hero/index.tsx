@@ -22,15 +22,23 @@ const Hero: React.FC = () => {
         </Box>
        
         <Stack direction="row" gap={4}>
-          <Button leftIcon={<SiGmail />} color="redGmail" outlineColor="blueLinkedIn" outlineOffset={0}>
-            <Text color="blueLinkedIn">Email Me</Text>
-          </Button>
-          <Button leftIcon={<SiLinkedin />} color="blueLinkedIn" outlineColor="blueLinkedIn" outlineOffset={0}>
-            <Text color="blueLinkedIn">LinkedIn</Text>
-          </Button>
-          <Button leftIcon={<SiGithub />} color="black" outlineColor="blueLinkedIn" outlineOffset={0}>
-            <Text color="blueLinkedIn">Github</Text>
-          </Button>
+          <a href="mailto:pradanaricoputra@gmail.com">
+            <Button leftIcon={<SiGmail />} color="redGmail" outlineColor="blueLinkedIn" outlineOffset={0}>
+              <Text color="blueLinkedIn">Email Me</Text>
+            </Button>
+          </a>
+
+          <a href="http://linkedin.com/in/ricoputrap/" target="_blank" rel="noopener noreferrer">
+            <Button leftIcon={<SiLinkedin />} color="blueLinkedIn" outlineColor="blueLinkedIn" outlineOffset={0}>
+              <Text color="blueLinkedIn">LinkedIn</Text>
+            </Button>
+          </a>
+
+          <a href="https://github.com/ricoputrap" target="_blank" rel="noopener noreferrer">
+            <Button leftIcon={<SiGithub />} color="black" outlineColor="blueLinkedIn" outlineOffset={0}>
+              <Text color="blueLinkedIn">Github</Text>
+            </Button>
+          </a>
         </Stack>
       </Box>
       <Box>
