@@ -1,9 +1,9 @@
-import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image';
 import React from 'react'
-import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import SelfPic from "../../assets/images/self-pic.png";
+import CTAs from '../molecules/CTAs';
 
 const Hero: React.FC = () => {
   return (
@@ -46,30 +46,7 @@ const Hero: React.FC = () => {
         </Box>
        
        {/* CTAs */}
-        <Stack
-          direction="row"
-          gap={4}
-          wrap={{ base: "wrap", md: "unset" }}
-          justifyContent={{ base: "center", md: "unset" }}
-        >
-          <a href="mailto:pradanaricoputra@gmail.com">
-            <Button leftIcon={<SiGmail />} color="redGmail" outlineColor="blueLinkedIn" outlineOffset={0}>
-              <Text color="blueLinkedIn">Email Me</Text>
-            </Button>
-          </a>
-
-          <a href="http://linkedin.com/in/ricoputrap/" target="_blank" rel="noopener noreferrer">
-            <Button leftIcon={<SiLinkedin />} color="blueLinkedIn" outlineColor="blueLinkedIn" outlineOffset={0}>
-              <Text color="blueLinkedIn">LinkedIn</Text>
-            </Button>
-          </a>
-
-          <a href="https://github.com/ricoputrap" target="_blank" rel="noopener noreferrer">
-            <Button leftIcon={<SiGithub />} color="black" outlineColor="blueLinkedIn" outlineOffset={0}>
-              <Text color="blueLinkedIn">Github</Text>
-            </Button>
-          </a>
-        </Stack>
+        <CTAs />
       </Box>
 
       {/* Self Picture */}
