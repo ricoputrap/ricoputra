@@ -9,7 +9,9 @@ const theme = extendTheme({
     body: `'Fira Code', monospace`
   },
   colors: {
-    grayText: "#787774"
+    grayText: "#787774",
+    blueLinkedIn: "#0077B7",
+    redGmail: "#F14336"
   }
 })
 
