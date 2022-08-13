@@ -1,15 +1,18 @@
-import { Flex } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 import Hero from '../Hero'
-import { Container } from './index.styles'
 
 const Layout: React.FC = () => {
   return (
-    <Flex justifyContent="center">
-      <Container>
+    <Box display="flex" justifyContent="center">
+      <Box
+        width={{ base: "660px", lg: "764px" }}
+        marginTop={{ base: "64px", lg: "120px" }}
+        marginBottom="80px"
+      >
         <Hero />
-      </Container>
-    </Flex>
+      </Box> 
+    </Box>
   )
 }
 
