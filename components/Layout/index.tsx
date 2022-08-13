@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 import Hero from '../organisms/Hero'
+import TechStack from '../organisms/TechStack'
 
 const Layout: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Layout: React.FC = () => {
         marginBottom="80px"
       >
         <Hero />
+        <TechStack />
       </Box> 
     </Box>
   )
