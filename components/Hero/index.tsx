@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, Heading, Stack, Text } from '@chakra-ui/react'
 import Image from 'next/image';
 import React from 'react'
+import { SiGmail, SiLinkedin, SiGithub } from "react-icons/si";
 
 import SelfPic from "../../assets/images/self-pic.png";
 
@@ -19,6 +20,18 @@ const Hero: React.FC = () => {
             doing <strong>system analysis</strong>.
           </Text>
         </Box>
+       
+        <Stack direction="row" gap={4}>
+          <Button leftIcon={<SiGmail />} color="redGmail" outlineColor="blueLinkedIn" outlineOffset={0}>
+            <Text color="blueLinkedIn">Email Me</Text>
+          </Button>
+          <Button leftIcon={<SiLinkedin />} color="blueLinkedIn" outlineColor="blueLinkedIn" outlineOffset={0}>
+            <Text color="blueLinkedIn">LinkedIn</Text>
+          </Button>
+          <Button leftIcon={<SiGithub />} color="black" outlineColor="blueLinkedIn" outlineOffset={0}>
+            <Text color="blueLinkedIn">Github</Text>
+          </Button>
+        </Stack>
       </Box>
       <Box>
         <Image src={ SelfPic } width={278} height={305} alt="self-picture" />
