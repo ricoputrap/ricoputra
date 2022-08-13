@@ -2,8 +2,8 @@ import { Box, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image';
 import React from 'react'
 
-import SelfPic from "../../assets/images/self-pic.png";
-import CTAs from '../molecules/CTAs';
+import SelfPic from "../../../assets/images/self-pic.png";
+import CTAs from '../../molecules/CTAs';
 
 const Hero: React.FC = () => {
   return (
