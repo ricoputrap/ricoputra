@@ -1,10 +1,11 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-import Blogs from '../organisms/Blogs'
-import Hero from '../organisms/Hero'
-import TechStack from '../organisms/TechStack'
 
-const Layout: React.FC = () => {
+type Props = {
+  children: React.ReactNode
+}
+
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <Box display="flex" justifyContent="center">
       <Box
@@ -12,9 +13,7 @@ const Layout: React.FC = () => {
         marginTop={{ base: "64px", lg: "120px" }}
         marginBottom="80px"
       >
-        <Hero />
-        <TechStack />
-        <Blogs />
+        { children }
       </Box> 
     </Box>
   )
