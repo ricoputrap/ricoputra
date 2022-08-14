@@ -2,7 +2,6 @@ import { Box, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image';
 import React from 'react'
 
-import SelfPic from "../../../assets/images/self-pic.png";
 import CTAs from '../../molecules/CTAs';
 import HeroDescription from '../../molecules/HeroDescription';
 
@@ -44,7 +43,7 @@ const Hero: React.FC = () => {
 
       {/* Self Picture */}
       <Box>
-        <Image src={ SelfPic } width={278} height={305} alt="self-picture" />
+        <Image src="/images/self-pic.png" width={278} height={305} alt="self-picture" />
       </Box>
     </Box>
   )

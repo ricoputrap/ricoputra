@@ -10,6 +10,7 @@ const theme = extendTheme({
   },
   colors: {
     grayText: "#787774",
+    grayBg: "#E0E0E0",
     blueLinkedIn: "#0077B7",
     blueSecondary: "#DAEBF1",
     redGmail: "#F14336"
