@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
+import Blogs from '../organisms/Blogs'
 import Hero from '../organisms/Hero'
 import TechStack from '../organisms/TechStack'
 
@@ -13,6 +14,7 @@ const Layout: React.FC = () => {
       >
         <Hero />
         <TechStack />
+        <Blogs />
       </Box> 
     </Box>
   )
