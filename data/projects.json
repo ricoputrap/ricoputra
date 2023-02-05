@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "title": "nextjs-ts-pagination",
+      "cover": "/images/projects/project-nextjs-ts-pagination.png",
+      "url": "https://nextjs-ts-pagination.vercel.app/",
+      "github": "https://github.com/ricoputrap/nextjs-ts-pagination",
+      "techStacks": [
+        { "id": 0, "label": "Next JS", "bgColor": "blueSecondary" },
+        { "id": 1, "label": "TypeScript", "bgColor": "grayBg" },
+        { "id": 2, "label": "Chakra UI", "bgColor": "grayBg" }
+      ]
+    }
+  ]
+}

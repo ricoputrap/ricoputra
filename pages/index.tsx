@@ -1,16 +1,20 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Layout from '../components/Layout'
+import Project from '../components/molecules/ProjectCard/index.types';
 import Blogs from '../components/organisms/Blogs';
 import Hero from '../components/organisms/Hero';
+import Projects from '../components/organisms/Projects';
 import TechStack from '../components/organisms/TechStack';
 import Base from '../core-ui/Base'
 import blogs from "../data/blogs.json";
+import projects from "../data/projects.json"
 
 type Props = {
-  blogs: any[]
+  blogs: any[];
+  projects: Project[];
 }
 
-const Home: NextPage<Props> = ({ blogs }) => {
+const Home: NextPage<Props> = ({ blogs, projects }) => {
   console.log(blogs)
   return (
     <Base>
@@ -18,6 +22,7 @@ const Home: NextPage<Props> = ({ blogs }) => {
         <Hero />
         <TechStack />
         <Blogs data={ blogs } />
+        <Projects projects={ projects } />
       </Layout>
     </Base>
   )
@@ -26,7 +31,8 @@ const Home: NextPage<Props> = ({ blogs }) => {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      blogs: blogs.data
+      blogs: blogs.data,
+      projects: projects.data
     }
   }
 }

@@ -19,7 +19,7 @@ const Blogs: React.FC<Props> = ({ data }) => {
       >
         {data.map(blog => (
           <Card key={ blog.id } coverImg={ BlogCover } url={ blog.url }>
-            <Text>{ blog.title }</Text>
+            <Text fontWeight={600}>{ blog.title }</Text>
 
             <Box display="flex" flexWrap="wrap" gap="8px">
               {blog.categories.map((category: any) => (
