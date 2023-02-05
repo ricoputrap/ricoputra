@@ -1,6 +1,7 @@
 import React from 'react'
 import { TPost } from '../../../types/blog.types'
 import { Box, Text } from '@chakra-ui/react'
+import Link from 'next/link';
 
 const Post: React.FC<TPost> = ({ frontmatter, slug }) => {
   const { title, description, date } = frontmatter;
@@ -21,6 +22,10 @@ const Post: React.FC<TPost> = ({ frontmatter, slug }) => {
       <Text fontSize="12px">
         { date }
       </Text>
+
+      <Link href={`/blog/${slug}`}>
+        Read More
+      </Link>
     </Box>
   )
 }
