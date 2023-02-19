@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       >
         {/* Title */}
         <Heading as="h1" fontSize={{ base: 36, lg: 40 }}>
-          Hi, I&apos;m Rico
+          Hi, I&apos;m RICO
         </Heading>
 
         {/* Subtitle */}
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           fontSize={{ base: "20px", lg: "24px" }}
           color="grayText"
         >
-          Software Engineer - React JS
+          Software Engineer
         </Heading>
 
         <HeroDescription />

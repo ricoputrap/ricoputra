@@ -3,14 +3,19 @@ import TechStackRow from '../../molecules/TechStackRow'
 import Section from '../Section'
 
 const stacks = {
-  frontend: ["React JS", "Next JS", "JavaScript"],
-  backend: ["Node JS", "Express JS", "TypeScript"],
-  project: ["Notion", "Jira", "Confluence", "Figma", "Invision"]
+  frontend: ["React JS", "Next JS", "Chakra UI"],
+  backend: ["Node JS", "Express JS"],
+  language: ["JavaScript", "TypeScript"],
+  project: ["Notion", "Jira", "Figma"]
 }
 
 const TechStack: React.FC = () => {
   return (
     <Section title="Tech Stack">
+      <TechStackRow
+        title="LANGUAGE"
+        stacks={ stacks.language }
+      />
       <TechStackRow
         title="FRONTEND"
         stacks={ stacks.frontend }

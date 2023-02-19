@@ -7,9 +7,8 @@ const HeroDescription = () => {
       <Text maxWidth={96} fontWeight="bold">Rico Putra Pradana 🙋🏻‍♂️</Text>
       <Text maxWidth={96}>Professionally coding for <strong>2 years</strong> 🧑🏻‍💻</Text>
       <Text maxWidth={96}>
-        A <strong>React Developer</strong> who can 
-        coding <strong>backend</strong> on <strong>Express JS</strong> and love 
-        doing <strong>system analysis</strong>.
+        I love doing <strong>System Analysis & Design</strong> and  develop the
+        system in <strong>TypeScript</strong> using <strong>React & Express JS</strong>.
       </Text>
     </Box>
   )
