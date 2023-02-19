@@ -1,10 +1,12 @@
-import { GetStaticPaths, GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { marked } from "marked"
 import { TFrontmatter } from "../../types/blog.types";
 import { Box, Text } from "@chakra-ui/react";
+import Base from "../../core-ui/Base";
+import Layout from "../../components/Layout";
+import BlogPostContent from "../../core-ui/BlogPostContent";
 
 interface Props {
   frontmatter: TFrontmatter;
@@ -12,31 +14,33 @@ interface Props {
   content: string;
 }
 
-const PostPage: React.FC<Props> = ({
+const PostPage: NextPage<Props> = ({
   frontmatter: { title, date, description },
   slug,
   content
 }) => {
 
   return (
-    <Box>
-      <Text
-        fontSize="32px"
-        fontWeight={600}
-      >
-        { title }
-      </Text>
+    <Base>
+      <Layout>
+        <Box paddingX="20px">
+          <Text
+            fontSize="40px"
+            fontWeight={600}
+          >
+            { title }
+          </Text>
 
-      <Text>
-        Posted on { date }
-      </Text>
+          <Text fontSize="12px">
+            Posted on { date }
+          </Text>
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: marked(content)
-        }}
-      ></div>
-    </Box>
+          <Box marginTop="20px">
+            <BlogPostContent content={ content } />
+          </Box>
+        </Box>
+      </Layout>
+    </Base>
   )
 }
 
@@ -49,7 +53,7 @@ type TPath = {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join("posts/published"));
 
   const paths: TPath[] = files.map(filename => ({
     params: {
@@ -66,7 +70,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const slug = context.params?.slug;
   const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
+    path.join("posts/published", slug + ".md"),
     "utf-8"
   );
 
